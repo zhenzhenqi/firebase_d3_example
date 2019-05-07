@@ -1,0 +1,25 @@
+/* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+
+{
+  "rules": {
+    "memes": {
+      "public": {
+        ".read": true,
+        "$memeID": {
+          /* ".write": "data.child('userID').val() === auth.uid", */
+          ".write": "!data.exists() || data.exists() && data.child('userID').val() === auth.uid",
+          ".validate": "newData.child('userID').val() === auth.uid"
+        }
+      },
+      "private": {
+        "$userID": {
+          ".read": "auth.uid === $userID",
+          ".write": "auth.uid === $userID",
+          "$memeID": {
+            ".validate": "newData.child('userID').val() === auth.uid"
+          }
+        }
+      }
+    }
+  }
+}
