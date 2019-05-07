@@ -166,7 +166,7 @@
       observable.trigger('updateMemes', tempData);
     });
   }
-  
+
 </script>
 
 <style></style>
