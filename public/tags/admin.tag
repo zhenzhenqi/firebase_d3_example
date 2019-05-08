@@ -4,8 +4,9 @@
     <button type="button" onclick={ logIn }>Login</button>
   </div>
 
-  <private if={currentUser}></private>
-
+  <private_d3 if={currentUser}></private_d3>
+  
+  
   <script>
     var tag = this;
 

@@ -9,9 +9,6 @@
 		<li>
 			<a href="#admin">admin</a>
 		</li>
-		<li>
-			<a href="chart.html">D3</a>
-		</li>
 	</ul>
 
 	<script>
